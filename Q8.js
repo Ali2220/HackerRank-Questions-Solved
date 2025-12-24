@@ -8,23 +8,21 @@
 // Minimum sum = total sum − max element
 // Maximum sum = total sum − min element
 function miniMaxSum(arr) {
-    let max = arr[0]
-    let min = arr[0]
-    let total = 0
+  let max = arr[0];
+  let min = arr[0];
+  let total = 0;
 
-    for(let i = 0; i < arr.length; i++){
-        total = total + arr[i]
-        if(arr[i] < min){
-            min = arr[i]
-        }
-        if(arr[i] > max){
-            max = arr[i]
-        }
+  for (let i = 0; i < arr.length; i++) {
+    total = total + arr[i];
+    if (arr[i] < min) {
+      min = arr[i];
     }
+    if (arr[i] > max) {
+      max = arr[i];
+    }
+  }
 
-    console.log(total - max, total - min);
-    
-
+  console.log(total - max, total - min);
 }
 
-miniMaxSum([1,3,5,7,9])
+miniMaxSum([1, 3, 5, 7, 9]);
